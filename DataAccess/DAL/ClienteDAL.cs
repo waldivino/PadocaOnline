@@ -6,8 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PadocaOnline.DAL
-{
     [Table("Cliente")]
     public class ClienteDAL
     {
@@ -19,4 +17,4 @@ namespace PadocaOnline.DAL
         [Required(ErrorMessage = "Endereço não pode ser branco.")]
         public string endereco { get; set; }
     }
-}
+

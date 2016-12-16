@@ -6,8 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PadocaOnline.DAL
-{
     [Table("Fornada")]
     public class FornadaDAL
     {
@@ -17,4 +15,4 @@ namespace PadocaOnline.DAL
         [Required(ErrorMessage = "Data e hora não pode ser branco.")]
         public DateTime dataHora { get; set; }
     }
-}
+
