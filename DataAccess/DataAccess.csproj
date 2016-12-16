@@ -51,10 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="DAL\ClienteDAL.cs" />
-    <Compile Include="DAL\Contexto.cs" />
-    <Compile Include="DAL\FornadaDAL.cs" />
-    <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="ContextoDAL\ClienteContextDAL.cs" />
+    <Compile Include="ContextoDAL\FornadaContextDAL.cs" />
+    <Compile Include="ModelDAL\ClienteDAL.cs" />
+    <Compile Include="ModelDAL\Contexto.cs" />
+    <Compile Include="ModelDAL\FornadaDAL.cs" />
+    <Compile Include="ModelDAL\UsuarioDAL.cs" />
     <Compile Include="Migrations\201612161259089_initial.cs" />
     <Compile Include="Migrations\201612161259089_initial.Designer.cs">
       <DependentUpon>201612161259089_initial.cs</DependentUpon>
@@ -62,6 +64,10 @@
     <Compile Include="Migrations\201612161319023_Usuario.cs" />
     <Compile Include="Migrations\201612161319023_Usuario.Designer.cs">
       <DependentUpon>201612161319023_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612161450580_teste2_migrations.cs" />
+    <Compile Include="Migrations\201612161450580_teste2_migrations.Designer.cs">
+      <DependentUpon>201612161450580_teste2_migrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612161319023_Usuario.resx">
       <DependentUpon>201612161319023_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612161450580_teste2_migrations.resx">
+      <DependentUpon>201612161450580_teste2_migrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

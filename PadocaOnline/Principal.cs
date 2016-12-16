@@ -2,16 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PadocaOnline
 {
     public class Principal
     {
-        public void Main()
+        public List<ClienteDAL>  Main()
         {
             var db = new Contexto();
+
+            List<ClienteDAL> lista = new List<ClienteDAL>();
+            ClienteDAL dal = null;
 
             var g1 = new ClienteDAL() { nome = "Fred", endereco = "Rua Iaco", email = "x" };
             var g2 = new ClienteDAL() { nome = "Frederico", endereco = "Rua Combú", email = "x" };
@@ -27,13 +28,23 @@ namespace PadocaOnline
 
             db.SaveChanges();
 
-            var dados = from p in db.FornadaContexto
+            var dados = from p in db.ClienteContexto
                         select p;
 
-            foreach (var linha in dados)
+
+            foreach(var cli in dados)
             {
-                Console.WriteLine("{0,-30} data e hora da fornada {1}", linha.descricao, linha.descricao);
+                dal = new ClienteDAL();
+                dal.id = cli.id;
+                dal.nome = cli.nome;
+                dal.email = cli.email;
+                dal.endereco = cli.endereco;
+
+                lista.Add(dal);
             }
+
+
+            return lista;
 
         }
     }

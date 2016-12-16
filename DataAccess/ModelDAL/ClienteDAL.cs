@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
     [Table("Cliente")]
     public class ClienteDAL
-    {
+{
         public Int32 id { get; set; }
         [Required(ErrorMessage = "Nome não pode ser branco.")]
         public string nome { get; set; }
